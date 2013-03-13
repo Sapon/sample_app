@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple App - ENI Tweet | <%= @titre %></title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
+  <%= csrf_meta_tags %> <!--for security  digitial signature into the page-->
+  
+  <%= render 'layouts/stylesheets' %>
+  
+  </head>
+<div class="container">
+
+  <%= render 'layouts/header' %>	
+
 <body>
-
-<%= yield %>
-
+	<section class="round">
+	<%= yield %>
+	</section>
+	<%= render 'layouts/footer' %>
+ </div>
 </body>
 </html>

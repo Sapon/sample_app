@@ -14,7 +14,7 @@ end
 group :test do
   gem 'rspec', '2.5.0'
   gem 'webrat', '0.7.1'
-  gem 'spork', '0.9.0.rc5'
+  gem 'spork'
 end
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,6 +29,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.12'
+gem 'bootstrap-sass', '2.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
